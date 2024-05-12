@@ -1,27 +1,8 @@
-# AllTalk TTS
-AllTalk is an updated version of the Coqui_tts extension for Text Generation web UI. Features include:
-
-- **Can be run as a** [standalone application](https://github.com/erew123/alltalk_tts/#-quick-setup-text-generation-webui--standalone-installation) **or part of :**
-   - **Text-generation-webui** [link](https://github.com/oobabooga/text-generation-webui)
-   - **SillyTavern** [link](https://github.com/SillyTavern/SillyTavern)
-   - **KoboldCPP** [link](https://github.com/LostRuins/koboldcpp)
-- **Simple setup utlilty** Windows & Linux.
-- **API Suite and 3rd Party support via JSON calls:** Can be used with 3rd party applications via JSON calls.
-- **Model Finetuning:** Train the model specifically on a voice of your choosing for better reproduction.
-- **Local/Custom models:** Use any of the XTTSv2 models (API Local and XTTSv2 Local).
-- **Bulk TTS Generator/Editor:** Generate hours of TTS into one big file or have something read back to you [demo](https://www.youtube.com/watch?v=hunvXn0mLzc).
-- **DeepSpeed:** A 2-3x performance boost generating TTS. [Screenshot](https://github.com/erew123/screenshots/raw/main/deepspeed.jpg)
-- **Low VRAM mode:** Great for people with small GPU memory or if your VRAM is filled by your LLM.
-- **Custom Start-up Settings:** Adjust your default start-up settings. [Screenshot](https://github.com/erew123/screenshots/raw/main/settingsanddocs.jpg)
-- **Narrarator:** Use different voices for main character and narration. [Example Narration](https://vocaroo.com/18nrv7FR6wuA)
-- **Optional wav file maintenance:** Configurable deletion of old output wav files. [Screenshot](https://github.com/erew123/screenshots/raw/main/settingsanddocs.jpg)
-- **Documentation:** Fully documented with a built in webpage. [Screenshot](https://github.com/erew123/screenshots/raw/main/settingsanddocs.jpg)
-- **Clear Console output:** Clear command line output for any warnings or issues.
 
 ### 🟦 Screenshots
-|![image](https://github.com/erew123/screenshots/raw/main/textgensettings.jpg) | ![image](https://github.com/erew123/screenshots/raw/main/setuputilitys.jpg) | ![image](https://github.com/erew123/screenshots/raw/main/deepspeed.jpg) |![image](https://github.com/erew123/screenshots/raw/main/textgen.jpg) |
+![image](https://github.com/erew123/screenshots/raw/main/setuputilitys.jpg) | ![image](https://github.com/erew123/screenshots/raw/main/deepspeed.jpg) |![image](https://github.com/erew123/screenshots/raw/main/textgen.jpg) |
 |:---:|:---:|:---:|:---:|
-|![image](https://github.com/erew123/screenshots/raw/main/settingsanddocs.jpg) | ![image](https://github.com/erew123/screenshots/raw/main/finetune1.jpg) | ![image](https://github.com/erew123/screenshots/raw/main/finetune2.jpg) |![image](https://github.com/erew123/screenshots/raw/main/sillytavern.jpg)|
+|![image](https://github.com/erew123/screenshots/raw/main/settingsanddocs.jpg) | ![image](https://github.com/erew123/screenshots/raw/main/finetune1.jpg) | ![image](https://github.com/erew123/screenshots/raw/main/finetune2.jpg) |
 
 ---
 
@@ -57,48 +38,6 @@ If AllTalk has been helpful to you, consider showing your support through a dona
 
 ---
 
-### 🟩 Quick Setup (Text-generation-webui & Standalone Installation)
-
-Quick setup scripts are available for users on Windows 10/11 and Linux. Instructional videos for both setup processes are linked below.
-
-- Ensure that **Git** is installed on your system as it is required for cloning the repository. If you do not have Git installed, visit [**Git's official website**](https://git-scm.com/downloads) to download and install it.
-- Windows users must install C++ development tools for Python to compile Python packages. Detailed information and a link to these tools can be found in the help section [**Windows & Python requirements for compiling packages**](https://github.com/erew123/alltalk_tts#-help-with-problems).
-
-<details>
-<summary>QUICK SETUP - Text-Generation-webui</summary>
-<br>
-
-For a step-by-step video guide, click [here](https://www.youtube.com/watch?v=icn2XS5rUH8).
-
-To set up AllTalk within Text-generation-webui, follow either method:
-
-1. **Download AllTalk Setup**:
-   - **Via Terminal/Console (Recommended)**:
-     - `cd \text-generation-webui\extensions\`
-     - `git clone https://github.com/erew123/alltalk_tts`
-   - **Via Releases Page (Cannot be automatically updated after install as its not linked to Github)**:
-     - Download the latest `alltalk_tts.zip` from [Releases](https://github.com/erew123/alltalk_tts/releases) and extract it to `\text-generation-webui\extensions\alltalk_tts\`.
-
-2. **Start Python Environment**:
-   - In the text-generation-webui folder, start the environment with the appropriate command:
-     - Windows: `cmd_windows.bat`
-     - Linux: `./cmd_linux.sh`<br><br>
-    
-     > If you're unfamiliar with Python environments and wish to learn more, consider reviewing **Understanding Python Environments Simplified** in the Help section.
-
-3. **Run AllTalk Setup Script**:
-   - Navigate to the AllTalk directory and execute the setup script:
-     - `cd extensions`
-     - `cd alltalk_tts`
-     - Windows: `atsetup.bat`
-     - Linux: `./atsetup.sh`
-
-4. **Install Requirements**:
-   - Follow the on-screen instructions to install the necessary requirements. It's recommended to test AllTalk's functionality before installing DeepSpeed.
-
-> **Note**: Always activate the Text-generation-webui Python environment before making any adjustments or using Fine-tuning. Additional instructions for Fine-tuning and DeepSpeed can be found within the setup utility and on this documentation page.
-
-</details>
 
 <details>
 <summary>QUICK SETUP - Standalone Installation</summary>
@@ -106,7 +45,10 @@ To set up AllTalk within Text-generation-webui, follow either method:
 
 For a step-by-step video guide, click [here](https://www.youtube.com/watch?v=AQYCccDRbaY).
 
+
 To perform a Standalone installation of AllTalk:
+
+**CONDA** and **PYTHON 3.10** recommended as a starting point
 
 1. **Get AllTalk Setup**:
    - **Via Terminal/Console (Recommended)**:
@@ -135,34 +77,6 @@ Refer to `🟩 Other installation notes` for further details, including informat
 
 ---
 
-
-
-### 🟩 Manual Installation - As part of Text generation web UI (inc. macOSX)
-<details>
-	<summary>MANUAL INSTALLATION - Text-Generation-webui</summary>
-
-### Manual Installation for Text Generation Web UI
-
-If you're using a Mac or prefer a manual installation for any other reason, please follow the steps below. This guide is compatible with the current release of Text Generation Web UI as of December 2023. Consider updating your installation if it's been a while, [update instructions here](https://github.com/oobabooga/text-generation-webui?tab=readme-ov-file#how-to-install).
-
-- For a visual guide on the installation process, watch [this video](https://youtu.be/9BPKuwaav5w).
-
-
-**PYTHON 3.10**
-
-
-1. **Navigate to Text Generation Web UI Folder**:
-   - Open a terminal window and move to your Text Generation Web UI directory with:
-     - `cd text-generation-webui`
-
-2. **Activate Text Generation Web UI Python Environment**:
-   - Start the appropriate Python environment for your OS using one of the following commands:
-     - For Windows: `cmd_windows.bat`
-     - For Linux: `./cmd_linux.sh`
-     - For macOS: `cmd_macos.sh`
-     - For WSL: `cmd_wsl.bat`
-   
-   - Loading the Text Generation Web UI's Python environment **is crucial**. If unsure about what a loaded Python environment should look like, refer to this [image](https://github.com/erew123/alltalk_tts/issues/25#issuecomment-1869344442) and [video guide](https://www.youtube.com/watch?v=9BPKuwaav5w).
    > If you're unfamiliar with Python environments and wish to learn more, consider reviewing **Understanding Python Environments Simplified** in the Help section.
 
 3. **Move to Extensions Folder**:
@@ -350,45 +264,7 @@ Maintaining the latest version of your setup ensures access to new features and 
 **NOTE** Future updates will be handled by using the `atsetup` utility.<br><br>
 **NOTE** If you have an install **prior to 28th March 2024** that you are updating, perform the `git pull` instructions below, then run the `atsetup` utility and select option 1 in either the Standalone ot Text-generation-webui menu (as matches your system). 
 
-<details>
-<summary>UPDATING - Text-Generation-webui</summary>
-<br>
 
-The update process closely mirrors the installation steps. Follow these to ensure your setup remains current:
-
-1. **Open a Command Prompt/Terminal**:
-   - Navigate to your Text-Generation-webui folder with:
-     - `cd text-generation-webui`
-
-2. **Start the Python Environment**:
-   - Activate the Python environment tailored for your operating system. Use the appropriate command from below based on your OS:
-     - Windows: `cmd_windows.bat`
-     - Linux: `./cmd_linux.sh`
-     - macOS: `cmd_macos.sh`
-     - WSL (Windows Subsystem for Linux): `cmd_wsl.bat`<br><br>
-
-   > If you're unfamiliar with Python environments and wish to learn more, consider reviewing **Understanding Python Environments Simplified** in the Help section.
-
-3. **Navigate to the AllTalk TTS Folder**:
-   - Move into your extensions and then the alltalk_tts directory:
-     - `cd extensions/alltalk_tts`
-
-4. **Update the Repository**:
-   - Fetch the latest updates from the repository with:
-     - `git pull`
-
-5. **Install Updated Requirements**:
-   - Depending on your machine's OS, install the required dependencies using pip:
-     - **For Windows Machines**:
-       - `pip install -r system\requirements\requirements_textgen.txt`
-     - **For Linux/Mac**:
-       - `pip install -r system/requirements/requirements_textgen.txt`
-
-5. **DeepSpeed Requirements**:
-   - If Text-gen-webui is using a new version of PyTorch, you may need to uninstall and update your DeepSpeed version.
-   - Use AllTalks diagnostics or start-up menu to identify your version of PyTorch.
-<br><br>
-</details>
 
 <details>
 <summary>UPDATING - Standalone Application</summary>
@@ -587,26 +463,6 @@ You have 2x options for how to setup DeepSpeed on Windows. Pre-compiled wheel fi
 
 </details>
 
-<details>
-	<summary>Windows DeepSpeed - Manual Compilation</summary>
-
-### Manual DeepSpeed Wheel Compilation
-
-1. **Preparation for Manual Compilation**:
-   - Manual compilation of DeepSpeed wheels is an advanced process that requires:
-     - **1-2 hours** of your time for initial setup and compilation.
-     - **6-10GB** of disk space on your computer.
-     - A solid technical understanding of Windows environments and Python.
-
-2. **Understanding Wheel Compatibility**:
-   - A compiled DeepSpeed wheel is uniquely tied to the specific versions of Python, PyTorch, and CUDA used during its compilation. If any of these versions are changed, you will need to compile a new DeepSpeed wheel to ensure compatibility.
-
-3. **Compiling DeepSpee Resources**:
-   - Myself and [@S95Sedan](https://github.com/S95Sedan) have worked to simplify the compilation process. [@S95Sedan](https://github.com/S95Sedan) has notably improved the process for later versions of DeepSpeed, ensuring ease of build on Windows.
-   - Because [@S95Sedan](https://github.com/S95Sedan) is now maintaining the instructions for compiling DeepSpeed on Windows, please visit [@S95Sedan](https://github.com/S95Sedan)'s<br>[DeepSpeed GitHub page](https://github.com/S95Sedan/Deepspeed-Windows).
-
-</details>
-
 ---
 
 ### 🆘 Support Requests, Troubleshooting & Feature requests
@@ -636,16 +492,6 @@ If you are on a Windows machine or a Linux machine, you should be able to use th
 
 1) Open a command prompt window and start the Python environment. Depending on your setup (Text-generation-webui or Standalone AllTalk), the steps to start the Python environment vary:<br>
 
-- **For Text-generation-webui Users**:
-  - Navigate to the Text-generation-webui directory:
-    - `cd text-generation-webui`
-  - Start the Python environment suitable for your OS:
-    - Windows: `cmd_windows.bat`
-    - Linux: `./cmd_linux.sh`
-    - macOS: `cmd_macos.sh`
-    - WSL (Windows Subsystem for Linux): `cmd_wsl.bat`
-  - Move into the AllTalk directory:
-    - `cd extensions/alltalk_tts`
 
 - **For Standalone AllTalk Users**:
   - Navigate to the `alltalk_tts` folder:
@@ -677,8 +523,6 @@ Separate environments, like separate rooms, keep everything organized and preven
 #### How It Works in Practice:
 
 **Standalone AllTalk Installation:** When you install AllTalk standalone, it's akin to adding a new room to your house specifically designed for your AllTalk activities. The setup process, using the atsetup utility, constructs this custom "room" (Python environment `alltalk_environment`) with all the necessary tools and furnishings (libraries and dependencies) that AllTalk needs to function smoothly, without meddling with the rest of your "house" (computer system). The AllTalk environment is started each time you run `start_alltalk` or `start_environment` within the AllTalk folder.
-
-**Text-generation-webui Installation:** Similarly, installing Text-generation-webui is like setting up another specialized room. Upon installation, it automatically creates its own tailored environment, equipped with everything required for text generation, ensuring a seamless and conflict-free operation. The Text-generation-webui environment is started each time you run `start_*your-os-version*` or `cmd_*your-os-version*` within the Text-generation-webui folder.
 
 #### Managing Environments:
 Just as you might renovate a room or bring in new furniture, you can also update or modify Python environments as needed. Tools like Conda or venv make it easy to manage these environments, allowing you to create, duplicate, activate, or delete them much like how you might manage different rooms in your house for comfort and functionality.
@@ -714,17 +558,8 @@ When a Python environment starts up, it changes the command prompt to show the P
 
 This is more than likely caused by having a space ` ` in your folder path e.g. `c:\program files\alltalk_tts`. In this circumstance you would be best moving the folder to a path without a space e.g. `c:\myfiles\alltalk_tts`. You would have to delete the `alltalk_environment` folder and `start_alltalk.bat` or `start_alltalk.sh` and then re-run `atsetup` to re-create the environment and startup files. 
 </details>
-<details>
-	<summary>🟨 I think AllTalks requirements file has installed something another extension doesn't like</summary><br>
+
 	
-Ive paid very close attention to **not** impact what Text-generation-webui is requesting on a factory install. This is one of the requirements of submitting an extension to Text-generation-webui. If you want to look at a comparison of a factory fresh text-generation-webui installed packages (with cuda 12.1, though AllTalk's requirements were set on cuda 11.8) you can find that comparison [here](https://github.com/erew123/alltalk_tts/issues/23). This comparison shows that AllTalk is requesting the same package version numbers as Text-generation-webui or even lower version numbers (meaning AllTalk will not update them to a later version). What other extensions do, I cant really account for that.
-
-I will note that the TTS engine downgrades Pandas data validator to 1.5.3 though its unlikely to cause any issues. You can upgrade it back to text-generation-webui default (december 2023) with `pip install pandas==2.1.4` when inside of the python environment. I have noticed no ill effects from it being a lower or higher version, as far as AllTalk goes. This is also the same behaviour as the Coqui_tts extension that comes with Text-generation-webui.
-
-Other people are reporting issues with extensions not starting with errors about Pydantic e.g. ```pydantic.errors.PydanticImportError: BaseSettings` has been moved to the pydantic-settings package. See https://docs.pydantic.dev/2.5/migration/#basesettings-has-moved-to-pydantic-settings for more details.```
-
-Im not sure if the Pydantic version has been recently updated by the Text-generation-webui installer, but this is nothing to do with AllTalk. The other extension you are having an issue with, need to be updated to work with Pydantic 2.5.x. AllTalk was updated in mid december to work with 2.5.x. I am not specifically condoning doing this, as it may have other knock on effects, but within the text-gen Python environment, you can use `pip install pydantic==2.5.0` or `pip install pydantic==1.10.13` to change the version of Pydantic installed.
-</details>
 <details>
 	<summary>🟨 I am having problems getting AllTalk to start after changing settings or making a custom setup/model setup.</summary><br>
 	
@@ -947,20 +782,6 @@ Hindi support does not officially exist according to Coqui. Ive added a limited 
 </details>
 
 ### Application Specific Issues
-
-<details>
-	<summary>🟨 SillyTavern - I changed my IP address and now SillyTavern wont connect with AllTalk</summary><br>
-SillyTavern checks the IP address when loading extensions, saving the IP to its configuration only if the check succeeds. For whatever reason, SillyTavern's checks dont always allow changing its IP address a second time.<br><br>
-
-To manually change the IP address:
-
-1) Navigate to the SillyTavern Public folder located at `/sillytavern/public/`.
-2) Open the `settings.json` file.
-3) Look for the AllTalk section and find the `provider_endpoint` entry.
-3) Replace `localhost` with your desired IP address, for example, `192.168.1.64`.
-
-![image](https://github.com/SillyTavern/SillyTavern/assets/35898566/144e4ac4-87dc-4a2b-8a73-39314abed1ca)
-</details>
 
 ### TTS Generation Issues & Questions
 
@@ -1463,16 +1284,3 @@ audioElement.play(); // Play the audio stream directly
 - **Output File (output_file):** This parameter names the output file where the audio will be streamed. It should be a string representing the file name, such as `stream_output.wav`. AllTalk will not save this as a file in its outputs folder.<br>
 
 ---
-
-### 🟩 Docker Builds and Google Colab's
-
-While an AllTalk Docker build exists, it's important to note that this version is based on an earlier iteration of AllTalk and was set up by a third party. At some point, my goal is to deepen my understanding of Docker and its compatibility with AllTalk. This exploration may lead to significant updates to AllTalk to ensure a seamless Docker experience. However, as of now, the Docker build should be considered a BETA version and isn't directly supported by me.
-
-As for Google Colab, there is partial compatibility with AllTalk, though with some quirks. I am currently investigating these issues and figuring out the necessary adjustments to enhance the integration. Until I can ensure a smooth experience, I won't be officially releasing any Google Colab implementations of AllTalk.
-
----
-
-### 🔴 Future to-do list
-- I am maintaining a list of things people request [here](https://github.com/erew123/alltalk_tts/discussions/74)
-- Possibly add some additional TTS engines (TBD).
-- Have a break!
