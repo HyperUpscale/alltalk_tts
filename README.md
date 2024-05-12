@@ -135,13 +135,7 @@ Refer to `🟩 Other installation notes` for further details, including informat
 
 ---
 
-### 🟩 Docker Builds and Google Colab's
 
-While an AllTalk Docker build exists, it's important to note that this version is based on an earlier iteration of AllTalk and was set up by a third party. At some point, my goal is to deepen my understanding of Docker and its compatibility with AllTalk. This exploration may lead to significant updates to AllTalk to ensure a seamless Docker experience. However, as of now, the Docker build should be considered a BETA version and isn't directly supported by me.
-
-As for Google Colab, there is partial compatibility with AllTalk, though with some quirks. I am currently investigating these issues and figuring out the necessary adjustments to enhance the integration. Until I can ensure a smooth experience, I won't be officially releasing any Google Colab implementations of AllTalk.
-
----
 
 ### 🟩 Manual Installation - As part of Text generation web UI (inc. macOSX)
 <details>
@@ -152,6 +146,10 @@ As for Google Colab, there is partial compatibility with AllTalk, though with so
 If you're using a Mac or prefer a manual installation for any other reason, please follow the steps below. This guide is compatible with the current release of Text Generation Web UI as of December 2023. Consider updating your installation if it's been a while, [update instructions here](https://github.com/oobabooga/text-generation-webui?tab=readme-ov-file#how-to-install).
 
 - For a visual guide on the installation process, watch [this video](https://youtu.be/9BPKuwaav5w).
+
+
+**PYTHON 3.10**
+
 
 1. **Navigate to Text Generation Web UI Folder**:
    - Open a terminal window and move to your Text Generation Web UI directory with:
@@ -1463,6 +1461,14 @@ audioElement.play(); // Play the audio stream directly
 - **Voice (voice):** This parameter specifies the voice type to be used for the TTS. The value should match one of the available voice options in AllTalks voices folder. This is a string representing the file, like `female_01.wav`.<br>
 - **Language (language):** This setting determines the language in which the text should be spoken. A two-letter language code (like `en` for English, `fr` for French, etc.).<br>
 - **Output File (output_file):** This parameter names the output file where the audio will be streamed. It should be a string representing the file name, such as `stream_output.wav`. AllTalk will not save this as a file in its outputs folder.<br>
+
+---
+
+### 🟩 Docker Builds and Google Colab's
+
+While an AllTalk Docker build exists, it's important to note that this version is based on an earlier iteration of AllTalk and was set up by a third party. At some point, my goal is to deepen my understanding of Docker and its compatibility with AllTalk. This exploration may lead to significant updates to AllTalk to ensure a seamless Docker experience. However, as of now, the Docker build should be considered a BETA version and isn't directly supported by me.
+
+As for Google Colab, there is partial compatibility with AllTalk, though with some quirks. I am currently investigating these issues and figuring out the necessary adjustments to enhance the integration. Until I can ensure a smooth experience, I won't be officially releasing any Google Colab implementations of AllTalk.
 
 ---
 
